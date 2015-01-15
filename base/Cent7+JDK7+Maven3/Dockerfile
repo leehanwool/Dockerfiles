@@ -10,7 +10,7 @@ ENV MAVEN_VERSION 3.2.5
 RUN yum install -y wget tar
 
 RUN \
-  wget http://www.us.apache.org/dist/maven/maven-$MAVEN_MAJOR/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
+  wget http://mirror.apache-kr.org/maven/maven-$MAVEN_MAJOR/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
   tar -xzf apache-maven-$MAVEN_VERSION-bin.tar.gz -C /usr/local && \
   mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
   rm apache-maven-$MAVEN_VERSION-bin.tar.gz && \

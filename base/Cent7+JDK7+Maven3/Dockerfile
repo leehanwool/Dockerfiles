@@ -17,3 +17,5 @@ RUN \
   ln -s /usr/local/maven/bin/mvn /usr/local/bin/mvn && \
   ln -s /usr/local/maven/bin/mvnDebug /usr/local/bin/mvnDebug && \
   ln -s /.m2 ~/.m2
+  
+RUN yum remove -y wget tar

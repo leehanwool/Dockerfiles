@@ -9,6 +9,6 @@ RUN mv spring-mvc-demo.war /applications/tomcat/webapps/
 
 WORKDIR /applications/tomcat/bin
 
-RUN ./startup.sh
-
 EXPOSE 8080
+
+CMD ["/startup.sh"]

@@ -10,4 +10,5 @@ RUN mv spring-mvc-demo.war /applications/tomcat/webapps/
 WORKDIR /applications/tomcat/bin
 
 EXPOSE 8080
+
 RUN ./catalina.sh start

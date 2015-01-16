@@ -1,4 +1,4 @@
-FROM leehanwool/leehanwool/cent7-jdk7-tomcat7
+FROM leehanwool/cent7-jdk7-tomcat7
 
 MAINTAINER Nathan Lee <hwlee@itwise.co.kr>
 

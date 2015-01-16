@@ -10,14 +10,12 @@ ENV TOMCAT_TGZ_URL http://mirror.apache-kr.org/tomcat/tomcat-$TOMCAT_MAJOR/v$TOM
 
 RUN yum install -y net-tools wget tar
 
-RUN mkdir -p "$CATALINA_HOME"
-
 WORKDIR /applications
 # INSTALL TOMCAT
 RUN curl -SL "$TOMCAT_TGZ_URL" -o tomcat.tar.gz
 
-RUN tar -xvf tomcat.tar.gz
+RUN tar xvf tomcat.tar.gz
 
-RUN rm -rf apache-tomcat.tar.gz
+RUN rm -rf tomcat.tar.gz
 
 EXPOSE 8080

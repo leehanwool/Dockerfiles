@@ -10,7 +10,7 @@ RUN yum install -y net-tools wget tar
 
 RUN mkdir applications
 
-WORKDIR /applcations
+WORKDIR /applications
 # INSTALL TOMCAT
 RUN wget -q http://mirror.apache-kr.org/tomcat/tomcat-$TOMCAT_MAJOR_VERSION/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
@@ -21,9 +21,9 @@ RUN rm -rf apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN wget http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war
 
-RUN mv jenkins.war /applcations/apache-tomcat-$TOMCAT_VERSION/webapps/
+RUN mv jenkins.war /applications/apache-tomcat-$TOMCAT_VERSION/webapps/
 RUN rm -rf jenkins.war
 
-WORKDIR /applcations/apache-tomcat-$TOMCAT_VERSION/bin
+WORKDIR /applications/apache-tomcat-$TOMCAT_VERSION/bin
 
 RUN ./catalina.sh start

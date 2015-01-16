@@ -21,4 +21,3 @@ RUN tar xvf tomcat.tar.gz
 RUN rm -rf tomcat.tar.gz
 
 EXPOSE 8080
-

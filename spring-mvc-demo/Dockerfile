@@ -11,7 +11,3 @@ WORKDIR /applications/tomcat/bin
 
 EXPOSE 8080
 RUN ./catalina.sh start
-
-
-
-

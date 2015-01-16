@@ -28,7 +28,7 @@ RUN rm -rf apache-tomcat.tar.gz
 RUN wget http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war
 
 #RUN mv jenkins.war /applications/apache-tomcat-$TOMCAT_VERSION/webapps/
-RUN mv jenkins.war /applications/tomcat/webapps/
+RUN mv jenkins.war /applications/tomcat/webapps/jenkins.war
 #RUN rm -rf jenkins.war
 
 #WORKDIR /applications/apache-tomcat-$TOMCAT_VERSION/bin

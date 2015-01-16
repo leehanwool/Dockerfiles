@@ -14,10 +14,10 @@ WORKDIR /applications
 # INSTALL TOMCAT
 RUN wget -q $TOMCAT_TGZ_URL
 
-RUN mv apache-tomcat-$TOMCAT_VERSION.tar.gz tomcat.tar.gz
+RUN tar xvf apache-tomcat-$TOMCAT_VERSION.tar.gz
 
-RUN tar xvf tomcat.tar.gz
+RUN mv apache-tomcat-$TOMCAT_VERSION.tar.gz tomcat
 
-RUN rm -rf tomcat.tar.gz
+RUN rm -rf apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 EXPOSE 8080

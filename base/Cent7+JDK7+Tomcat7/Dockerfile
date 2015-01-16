@@ -12,7 +12,9 @@ RUN yum install -y net-tools wget tar
 
 WORKDIR /applications
 # INSTALL TOMCAT
-RUN curl "$TOMCAT_TGZ_URL" -o tomcat.tar.gz
+RUN wget -q http://mirror.apache-kr.org/tomcat/tomcat-$TOMCAT_MAJOR_VERSION/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
+
+RUN mv apache-tomcat-$TOMCAT_VERSION.tar.gz tomcat.tar.gz
 
 RUN tar xvf tomcat.tar.gz
 

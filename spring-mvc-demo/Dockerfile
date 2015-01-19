@@ -11,4 +11,4 @@ WORKDIR /applications/tomcat/bin
 
 EXPOSE 8080
 
-RUN sh catalina.sh start
+CMD sh catalina.sh start
